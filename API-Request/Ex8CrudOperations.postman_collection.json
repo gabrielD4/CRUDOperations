@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "890ffbb5-50f5-4b22-8d18-cdc520f6693e",
+		"name": "Ex8CrudOperations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34592708"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"Tesla\",\r\n    \"type\": \"bellina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars?page=0&size=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update one",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars/1?type=novella",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars",
+						"1"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "novella"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
